@@ -1,5 +1,6 @@
 package com.rizalfadiaalfikri.lambda.app;
 
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 import com.rizalfadiaalfikri.lambda.utils.StringUtils;
@@ -11,6 +12,19 @@ public class MethodReferenceApp {
 
         System.out.println(predicateIsLowerCase.test("Rizal"));
         System.out.println(predicateIsLowerCase.test("rizal"));
+
+        // Method Reference Parameter
+        Function<String, String> functionUpper = new Function<String, String>() {
+
+            @Override
+            public String apply(String t) {
+                // TODO Auto-generated method stub
+                return t.toUpperCase();
+            }
+
+        };
+
+        System.out.println(functionUpper.apply("rizal"));
 
     }
 
