@@ -14,15 +14,7 @@ public class MethodReferenceApp {
         System.out.println(predicateIsLowerCase.test("rizal"));
 
         // Method Reference Parameter
-        Function<String, String> functionUpper = new Function<String, String>() {
-
-            @Override
-            public String apply(String t) {
-                // TODO Auto-generated method stub
-                return t.toUpperCase();
-            }
-
-        };
+        Function<String, String> functionUpper = String::toUpperCase;
 
         System.out.println(functionUpper.apply("rizal"));
 
